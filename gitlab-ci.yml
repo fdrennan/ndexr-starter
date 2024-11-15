@@ -1,0 +1,12 @@
+include:
+- project: 'cedar/gitlab-shared-library'
+  file: 'gapm/build-image.yml'
+
+build-image-fast:
+  extends: .gapm_build_image_fast
+  variables:
+    ENVIRONMENT: release
+    R_PACKAGES: >
+      MASS
+      dsassembly
+      tidyverse

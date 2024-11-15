@@ -1,0 +1,46 @@
+{
+  "name": "rapp",
+  "version": "1.0.0",
+  "author": "Freddy Drennan",
+  "description": "",
+  "homepage": "https://gitlab.com/fdrennan/rapp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/fdrennan/rapp.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/fdrennan/rapp/issues"
+  },
+  "dependencies": {
+    "@fontsource/fira-code": "^5.1.0",
+    "@popperjs/core": "^2.11.8",
+    "@selectize/selectize": "^0.15.2",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "bootswatch": "^5.3.3",
+    "d3": "^7.9.0",
+    "fast-geoip": "^1.1.88",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.7.1",
+    "js-cookie": "^3.0.5",
+    "selectize": "^0.12.6",
+    "selectize-plugin-a11y": "^1.1.0",
+    "sass": "^1.81.0"
+  },
+  "devDependencies": {
+    "npm": "^10.9.0",
+    "yarn": "^1.22.22"
+  },
+  "scripts": {
+    "up": "docker compose up -d",
+    "down": "docker compose down",
+    "restart": "npm run down && npm run up",
+    "logs": "docker compose logs -f",
+    "style": "R -e \"styler::style_dir()\"",
+    "console": "make -C ../.. up profile=console",
+    "sass": "sass --style=compressed src/css/home.scss src/css/home.css",
+    "app": "Rscript app.r",
+    "pkill": "sudo kill -9 $(sudo lsof -t -i:8000)"
+  }
+}

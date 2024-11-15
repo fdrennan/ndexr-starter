@@ -1,0 +1,15 @@
+x-common-service-properties: &common-properties
+  restart: unless-stopped
+  env_file: /Users/drennaf1/.Renviron
+ 
+
+services:
+  postgres:
+    <<: *common-properties
+    build:
+      context: ./services/postgres
+    volumes:
+      - "/Users/drennaf1/postgres/data:/var/lib/postgresql/data"
+    ports:
+      - "5432:5432"
+
