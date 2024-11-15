@@ -102,10 +102,12 @@ server_home <- function(id, session_home) {
                 tags$h4("Google Docs"),
                 tags$ul(
                   tags$li(
-                    tags$a("Freddy Onboarding", target="_blank", href="https://docs.google.com/document/d/11yXQEYwsOyKUebl1nIZFdSxHKmIISVB7TZherUulye8/edit?tab=t.0"),
+                    tags$a("Freddy Onboarding", target="_blank", href="https://docs.google.com/document/d/11yXQEYwsOyKUebl1nIZFdSxHKmIISVB7TZherUulye8/edit?tab=t.0")
+                  ),
+                  tags$li(
                     tags$a("Leo/Freddy", target="_blank", href="https://docs.google.com/document/d/1BYP8PoN6WdyvLR27jIdT20pmnGWHKSF_D7zLTY8ZfNY/edit?tab=t.0#heading=h.xzlrpqe7sp14")
                   )
-                )
+                ),
                 # Package Managers and Environments
                 tags$h4("Package Managers and Environments"),
                 tags$ul(
