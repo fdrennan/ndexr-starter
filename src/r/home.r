@@ -41,7 +41,7 @@ server_home <- function(id, session_home) {
   request <- request[grepl("HTTP", names(request))]
   
   # Assuming you have the correct SSH credentials
-  con <- ssh$ssh_connect(host = "localhost", passwd = Sys.getenv("passwd"))
+  # con <- ssh$ssh_connect(host = "localhost", passwd = Sys.getenv("passwd"))
   
   shiny$moduleServer(id, function(input, output, session) {
     ns <- session$ns
